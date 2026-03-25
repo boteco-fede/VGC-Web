@@ -16,12 +16,11 @@ export function Contact() {
           <div className="w-16 h-1 bg-gradient-gold mx-auto mb-10" />
 
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            For qualified investors and introducers
+            Get in Touch
           </h2>
 
           <p className="text-muted-foreground font-light leading-relaxed text-lg mb-12">
-            VGC Group works exclusively through trusted relationships. If you have been introduced
-            or would like to learn more, reach out directly.
+            Reach out directly to learn more about VGC Group.
           </p>
 
           <a

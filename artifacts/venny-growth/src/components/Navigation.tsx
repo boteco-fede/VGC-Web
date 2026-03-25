@@ -9,6 +9,32 @@ const navLinks = [
   { name: "Team", href: "#team" },
 ];
 
+function LogoMark({ size = "sm" }: { size?: "sm" | "lg" }) {
+  const box = size === "sm" ? "w-8 h-8 text-lg" : "w-12 h-12 text-2xl";
+  const text = size === "sm" ? "text-base" : "text-2xl";
+  const sub = size === "sm" ? "text-xs" : "text-sm";
+  return (
+    <div className="flex items-center gap-2.5">
+      <div
+        className={`${box} rounded-sm bg-background border border-primary/50 flex items-center justify-center shadow-[0_0_14px_rgba(212,175,55,0.18)] shrink-0`}
+      >
+        <span className="font-display font-bold text-primary leading-none"
+          style={{ fontSize: size === "sm" ? "1.2rem" : "1.7rem" }}>V</span>
+      </div>
+      <div className="flex flex-col leading-none">
+        <span className={`font-display font-semibold text-foreground tracking-tight ${text}`}>
+          Venny Growth
+        </span>
+        <span className={`font-light text-muted-foreground tracking-widest uppercase ${sub} mt-0.5`}>
+          Capital
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export { LogoMark };
+
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,13 +60,8 @@ export function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="group shrink-0">
-          <img
-            src={`${import.meta.env.BASE_URL}images/vgc-logo.png`}
-            alt="Venny Growth Capital"
-            className="h-9 w-auto transition-opacity duration-200 group-hover:opacity-85"
-          />
+        <Link href="/" className="group">
+          <LogoMark size="sm" />
         </Link>
 
         {/* Desktop Nav */}

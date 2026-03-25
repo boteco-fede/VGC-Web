@@ -19,36 +19,33 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center mb-12"
-        >
-          <img
-            src={`${import.meta.env.BASE_URL}images/vgc-logo.png`}
-            alt="Venny Growth Capital"
-            className="h-24 w-auto"
-          />
-        </motion.div>
-
         {/* Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-primary font-medium tracking-[0.22em] uppercase text-sm mb-8"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-primary font-medium tracking-[0.22em] uppercase text-sm mb-10"
         >
           Permanent capital. Venezuelan essential businesses.
         </motion.p>
+
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-10"
+        >
+          Venny Growth<br />
+          <span className="text-primary">Capital</span>
+        </motion.h1>
 
         {/* Body */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.28 }}
-          className="text-foreground/80 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12"
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="text-foreground/75 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12"
         >
           VGC Group is a permanent capital platform acquiring positions in Venezuelan essential
           businesses. We deploy patient, structured capital where institutional investors are
@@ -59,7 +56,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.48 }}
         >
           <button
             onClick={handleContact}

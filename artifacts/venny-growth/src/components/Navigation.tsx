@@ -48,13 +48,12 @@ export function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <Link href="/" className="group flex items-center gap-2">
-          <div className="w-8 h-8 rounded bg-gradient-gold flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.3)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all">
-            <span className="font-display font-bold text-background text-xl leading-none pt-1">V</span>
-          </div>
-          <span className="font-display font-semibold text-xl tracking-wide text-foreground">
-            Venny Growth<span className="text-primary">.</span>
-          </span>
+        <Link href="/" className="group flex items-center">
+          <img
+            src={`${import.meta.env.BASE_URL}images/vgc-logo.png`}
+            alt="Venny Growth Capital"
+            className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-90"
+          />
         </Link>
 
         {/* Desktop Nav */}

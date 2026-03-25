@@ -1,76 +1,83 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 export function Hero() {
-  const handleScroll = () => {
-    document.querySelector("#philosophy")?.scrollIntoView({ behavior: "smooth" });
+  const handleContact = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Image & Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <img
           src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
-          alt="Abstract dark financial background" 
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+          alt=""
+          className="w-full h-full object-cover opacity-30 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background/0 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/8 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Logo */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl"
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-12"
         >
-          <span className="inline-block py-1 px-3 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium tracking-widest uppercase mb-8 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-            Private Equity & Growth Capital
-          </span>
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] text-foreground mb-8">
-            Unlocking <span className="text-gradient-gold italic">Growth</span> for <br/>
-            Mid-Market Leaders.
-          </h1>
-          <p className="text-xl text-muted-foreground/90 font-light max-w-2xl mx-auto leading-relaxed mb-12">
-            We partner with exceptional management teams to build enduring value through strategic capital, operational excellence, and aligned incentives.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button 
-              onClick={handleScroll}
-              className="group px-8 py-4 rounded-sm font-medium bg-gradient-gold text-background hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-2"
-            >
-              Explore Our Approach
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button 
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-8 py-4 rounded-sm font-medium border border-border bg-card/30 backdrop-blur-sm hover:bg-white/5 hover:border-primary/50 transition-all duration-300"
-            >
-              Partner With Us
-            </button>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}images/vgc-logo.png`}
+            alt="Venny Growth Capital"
+            className="h-24 w-auto"
+          />
+        </motion.div>
+
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-primary font-medium tracking-[0.22em] uppercase text-sm mb-8"
+        >
+          Permanent capital. Venezuelan essential businesses.
+        </motion.p>
+
+        {/* Body */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.28 }}
+          className="text-foreground/80 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12"
+        >
+          VGC Group is a permanent capital platform acquiring positions in Venezuelan essential
+          businesses. We deploy patient, structured capital where institutional investors are
+          absent — and build value through governance, operational discipline, and long time horizons.
+        </motion.p>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <button
+            onClick={handleContact}
+            className="inline-flex items-center gap-2 px-10 py-4 rounded-sm font-medium bg-gradient-gold text-background hover:opacity-90 hover:shadow-[0_0_28px_rgba(212,175,55,0.35)] transition-all duration-300 hover:-translate-y-0.5 text-base"
+          >
+            Get in Touch
+          </button>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div 
+      {/* Scroll hint */}
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
-        onClick={handleScroll}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
-        <span className="text-xs uppercase tracking-widest text-muted-foreground">Discover</span>
-        <div className="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent relative overflow-hidden">
-          <motion.div 
-            className="w-full h-1/2 bg-primary"
-            animate={{ y: ["-100%", "200%"] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-          />
-        </div>
+        <div className="w-px h-10 bg-gradient-to-b from-primary/60 to-transparent animate-pulse" />
       </motion.div>
     </section>
   );

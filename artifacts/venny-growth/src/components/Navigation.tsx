@@ -4,10 +4,9 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "Philosophy", tab: "philosophy" },
-  { name: "Criteria",   tab: "criteria"   },
-  { name: "Approach",   tab: "approach"   },
-  { name: "Team",       tab: "team"       },
+  { name: "What We Do", href: "#what-we-do" },
+  { name: "The Opportunity", href: "#opportunity" },
+  { name: "Team", href: "#team" },
 ];
 
 export function Navigation() {
@@ -15,44 +14,32 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleTabClick = (tab: string) => {
-    setMobileMenuOpen(false);
-    window.dispatchEvent(new CustomEvent("switchTab", { detail: tab }));
-    setTimeout(() => {
-      const el = document.getElementById("philosophy");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 50);
-  };
-
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border/50 py-4 shadow-lg"
-          : "bg-transparent py-6"
+          ? "bg-background/90 backdrop-blur-md border-b border-border/50 py-3 shadow-lg"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <Link href="/" className="group flex items-center">
+        {/* Logo */}
+        <Link href="/" className="group shrink-0">
           <img
             src={`${import.meta.env.BASE_URL}images/vgc-logo.png`}
             alt="Venny Growth Capital"
-            className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-90"
+            className="h-9 w-auto transition-opacity duration-200 group-hover:opacity-85"
           />
         </Link>
 
@@ -61,7 +48,7 @@ export function Navigation() {
           {navLinks.map((link) => (
             <button
               key={link.name}
-              onClick={() => handleTabClick(link.tab)}
+              onClick={() => handleNavClick(link.href)}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               {link.name}
@@ -69,13 +56,13 @@ export function Navigation() {
           ))}
           <button
             onClick={() => handleNavClick("#contact")}
-            className="px-6 py-2.5 rounded-sm font-medium text-sm bg-gradient-gold text-background hover:opacity-90 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:-translate-y-0.5"
+            className="px-6 py-2.5 rounded-sm font-medium text-sm bg-gradient-gold text-background hover:opacity-90 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-300 hover:-translate-y-0.5"
           >
-            Partner With Us
+            Get in Touch
           </button>
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile toggle */}
         <button
           className="md:hidden text-foreground p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -97,7 +84,7 @@ export function Navigation() {
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => handleTabClick(link.tab)}
+                  onClick={() => handleNavClick(link.href)}
                   className="text-left text-lg font-medium text-foreground py-2 border-b border-white/5"
                 >
                   {link.name}
@@ -107,7 +94,7 @@ export function Navigation() {
                 onClick={() => handleNavClick("#contact")}
                 className="mt-4 w-full px-6 py-3 rounded-sm font-medium bg-gradient-gold text-background"
               >
-                Partner With Us
+                Get in Touch
               </button>
             </div>
           </motion.div>

@@ -1,7 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/sections/Hero";
-import { TabbedSection } from "@/sections/TabbedSection";
+import { WhatWeDo } from "@/sections/WhatWeDo";
+import { Opportunity } from "@/sections/Opportunity";
+import { Team } from "@/sections/Team";
 import { Contact } from "@/sections/Contact";
 
 export default function Home() {
@@ -9,7 +11,9 @@ export default function Home() {
     <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary-foreground">
       <Navigation />
       <Hero />
-      <TabbedSection />
+      <WhatWeDo />
+      <Opportunity />
+      <Team />
       <Contact />
       <Footer />
     </main>

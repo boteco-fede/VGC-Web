@@ -1,0 +1,23 @@
+packages:
+  "framer-motion": "For premium scroll animations and page transitions"
+  "react-hook-form": "For the contact form state management"
+  "@hookform/resolvers": "For zod validation integration with the form"
+  "zod": "For form validation schema"
+
+images:
+  - path: "artifacts/venny-growth/public/images/hero-bg.png"
+    description: "Abstract dark midnight blue and metallic gold gradient with subtle geometric lines and light leaks, premium finance aesthetic, sophisticated"
+    aspect_ratio: "16:9"
+  - path: "artifacts/venny-growth/public/images/team-1.png"
+    description: "Professional corporate headshot of a mature businessman in a tailored dark suit and tie, neutral modern office background, premium lighting"
+    aspect_ratio: "1:1"
+  - path: "artifacts/venny-growth/public/images/team-2.png"
+    description: "Professional corporate headshot of a businesswoman in an elegant navy blazer, confident expression, blurred modern office background"
+    aspect_ratio: "1:1"
+  - path: "artifacts/venny-growth/public/images/team-3.png"
+    description: "Professional corporate headshot of a younger male executive in a charcoal suit, slight smile, sophisticated cinematic lighting"
+    aspect_ratio: "1:1"
+
+notes:
+  - This is a frontend-only marketing site.
+  - The contact form will simulate a submission and show a success toast.

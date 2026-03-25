@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "Philosophy", href: "#philosophy" },
-  { name: "Criteria", href: "#criteria" },
-  { name: "Approach", href: "#approach" },
-  { name: "Team", href: "#team" },
+  { name: "Philosophy", tab: "philosophy" },
+  { name: "Criteria",   tab: "criteria"   },
+  { name: "Approach",   tab: "approach"   },
+  { name: "Team",       tab: "team"       },
 ];
 
 export function Navigation() {
@@ -21,6 +21,15 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleTabClick = (tab: string) => {
+    setMobileMenuOpen(false);
+    window.dispatchEvent(new CustomEvent("switchTab", { detail: tab }));
+    setTimeout(() => {
+      const el = document.getElementById("philosophy");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
 
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
@@ -53,7 +62,7 @@ export function Navigation() {
           {navLinks.map((link) => (
             <button
               key={link.name}
-              onClick={() => handleNavClick(link.href)}
+              onClick={() => handleTabClick(link.tab)}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               {link.name}
@@ -89,7 +98,7 @@ export function Navigation() {
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => handleNavClick(link.href)}
+                  onClick={() => handleTabClick(link.tab)}
                   className="text-left text-lg font-medium text-foreground py-2 border-b border-white/5"
                 >
                   {link.name}

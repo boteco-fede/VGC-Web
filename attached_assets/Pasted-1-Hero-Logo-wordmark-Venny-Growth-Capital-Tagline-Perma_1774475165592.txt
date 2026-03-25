@@ -1,0 +1,45 @@
+1. Hero
+
+Logo/wordmark: "Venny Growth Capital"
+Tagline: "Permanent capital. Venezuelan essential businesses."
+One short paragraph: "VGC Group is a permanent capital platform acquiring positions in Venezuelan essential businesses. We deploy patient, structured capital where institutional investors are absent — and build value through governance, operational discipline, and long time horizons."
+One CTA button: "Get in Touch" (anchors to contact section)
+
+2. What We Do
+Three columns, icon + heading + 2-line description:
+
+Permanent Capital — "No fixed fund life. No forced exits. We acquire and compound positions over long time horizons."
+Private Equity & Private Credit — "We deploy both equity and structured credit — acquiring positions, implementing institutional reporting, and professionalizing family-owned businesses."
+Essential Businesses — "We focus on non-discretionary sectors — energy services, agro & food processing, and financial services — with resilient demand regardless of macro conditions."
+
+3. The Opportunity
+Two-column layout. Left side heading: "Venezuela is the most dislocated investable market in the world." Right side: two short paragraphs:
+
+"An 80% GDP contraction over a decade has created capital scarcity, succession gaps in family-owned businesses, and attractive valuations across essential sectors. Businesses are mispriced due to balance-sheet stress, not fundamental demand weakness."
+"We are not underwriting macro recovery. We are acquiring essential businesses at dislocated prices and creating value through normalization, governance, and operational discipline — with multiple expansion as the upside."
+
+4. Team
+Three cards side by side:
+Federico Pineda | Founder & Managing Partner
+"Board Member at Grupo Catatumbo, a diversified industrial holding company in Western Venezuela. Former JPMorgan associate advising family offices with $2.5B+ AUM. Head of Capital Markets at Divibank (Maya Capital & BTV backed). Venezuelan-American with on-the-ground presence and institutional capital markets background."
+Esteban Pineda | Senior Advisor
+"President & CEO of Cementos Catatumbo, a privately owned cement company in Venezuela. Deep operating experience in industrial assets under prolonged macro stress. First-hand expertise in cost structures, logistics, labor, and government relations in complex environments."
+Carlos Naupari | Senior Advisor
+"Managing Partner of Velvet Investments, a São Paulo-based asset manager with $250M+ deployed into global private companies including SpaceX, OpenAI, Anthropic, and Anduril. Board member at Nortian (US biotech). Brings international capital allocation perspective across Latin America, the US, and the Middle East."
+5. Contact
+Minimal. Centered text:
+Heading: "For qualified investors and introducers"
+Subtext: "VGC Group works exclusively through trusted relationships. If you have been introduced or would like to learn more, reach out directly."
+Email button: federico@vennygrowthcapital.com
+No contact form needed.
+6. Footer
+
+"© 2026 Venny Growth Capital. All rights reserved."
+One line in small text: "This website is for informational purposes only and does not constitute an offer to sell or solicitation of an offer to buy any securities."
+
+Technical requirements:
+
+Fully responsive (mobile + desktop)
+No login, no CMS, no blog
+Fast load, no heavy libraries
+Single HTML file or clean React component is fine

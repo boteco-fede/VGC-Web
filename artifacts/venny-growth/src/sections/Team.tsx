@@ -24,7 +24,7 @@ const team = [
     name: "Miguel Jimenez",
     role: "Senior Advisor",
     location: "Miami, USA",
-    bio: "Former VP at Brillante Investment Advisors with energy and water sector focus; board observer at Swell Energy and Pluri. MIT graduate, Managing Director of the MIT Clean Energy Prize. Mentor at Endeavor. Brings deep technology investment and clean energy expertise across Latin America and the United States.",
+    bio: "Former VP at SoftBank Investment Advisers with energy and water sector focus; board observer at Swell Energy and Plenty. MIT Sloan MBA; Co-Managing Director of the MIT Clean Energy Prize. Mentor at Endeavor. Brings deep technology investment and clean energy expertise across Latin America and the United States.",
   },
 ];
 

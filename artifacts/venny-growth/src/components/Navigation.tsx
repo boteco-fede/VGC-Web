@@ -10,17 +10,39 @@ const navLinks = [
 ];
 
 function LogoMark({ size = "sm" }: { size?: "sm" | "lg" }) {
-  const box = size === "sm" ? "w-8 h-8 text-lg" : "w-12 h-12 text-2xl";
   const text = size === "sm" ? "text-base" : "text-2xl";
   const sub = size === "sm" ? "text-xs" : "text-sm";
   return (
     <div className="flex items-center gap-2.5">
-      <div
-        className={`${box} rounded-sm bg-background border border-primary/50 flex items-center justify-center shadow-[0_0_14px_rgba(212,175,55,0.18)] shrink-0`}
+      <svg
+        aria-label="VGC"
+        className={`${size === "sm" ? "w-8 h-9" : "w-12 h-14"} shrink-0 text-foreground`}
+        viewBox="0 0 72 86"
+        role="img"
       >
-        <span className="font-display font-bold text-primary leading-none"
-          style={{ fontSize: size === "sm" ? "1.2rem" : "1.7rem" }}>V</span>
-      </div>
+        <g fill="currentColor">
+          <rect x="4" y="4" width="20" height="17" />
+          <rect x="28" y="4" width="18" height="8" />
+          <rect x="50" y="4" width="18" height="17" />
+          <rect x="28" y="14" width="40" height="7" />
+          <rect x="4" y="25" width="40" height="9" fill="hsl(var(--primary))" />
+          <rect x="47" y="25" width="21" height="9" />
+          <rect x="4" y="37" width="29" height="10" />
+          <rect x="36" y="37" width="32" height="10" />
+          <rect x="4" y="50" width="14" height="9" />
+          <rect x="21" y="50" width="47" height="9" />
+        </g>
+        <text
+          x="4"
+          y="78"
+          fill="currentColor"
+          fontFamily="Georgia, serif"
+          fontSize="15"
+          letterSpacing="8"
+        >
+          VGC
+        </text>
+      </svg>
       <div className="flex flex-col leading-none">
         <span className={`font-display font-semibold text-foreground tracking-tight ${text}`}>
           Venny Growth

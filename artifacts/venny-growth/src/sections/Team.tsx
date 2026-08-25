@@ -15,14 +15,8 @@ const team = [
     bio: "President & CEO of Cementos Catatumbo, the only privately owned cement company in Venezuela. Deep operating experience in industrial assets under prolonged macro stress. First-hand expertise in logistics, labor, and government relations in complex environments.",
   },
   {
-    name: "Carlos Naupari",
-    role: "Senior Advisor",
-    location: "São Paulo, Brazil",
-    bio: "Managing Partner of Velvet Investments, a São Paulo-based asset manager with $250M+ deployed into global private companies including SpaceX, OpenAI, Anthropic, and Anduril. Board member at Nortian (US biotech). Brings international capital allocation perspective across Latin America, the US, and the Middle East.",
-  },
-  {
     name: "Miguel Jimenez",
-    role: "Senior Advisor",
+    role: "Operating Partner",
     location: "Miami, USA",
     bio: "Former VP at SoftBank Investment Advisers with energy and water sector focus; board observer at Swell Energy and Plenty. MIT Sloan MBA; Co-Managing Director of the MIT Clean Energy Prize. Mentor at Endeavor. Brings deep technology investment and clean energy expertise across Latin America and the United States.",
   },
@@ -43,7 +37,7 @@ export function Team() {
           subtitle="On-the-ground operators and institutional investors, united by a shared conviction in Venezuela's essential economy."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, i) => (
             <motion.div
               key={member.name}

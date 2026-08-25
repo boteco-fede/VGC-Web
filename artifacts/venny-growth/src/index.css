@@ -44,40 +44,37 @@
 
 /* Base Theme - Forcing Dark Premium Finance Aesthetic */
 :root {
-  /* Deep Navy Background */
-  --background: 222 47% 9%;
-  --foreground: 210 40% 98%;
+  /* VGC Management deck palette: near-black, ivory, and muted gold */
+  --background: 210 29% 5%;
+  --foreground: 45 24% 94%;
 
-  --card: 222 47% 13%;
-  --card-foreground: 210 40% 98%;
-  --card-border: 215 25% 20%;
+  --card: 210 25% 8%;
+  --card-foreground: 45 24% 94%;
+  --card-border: 215 17% 17%;
 
-  --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 98%;
-  --popover-border: 215 25% 20%;
+  --popover: 210 29% 7%;
+  --popover-foreground: 45 24% 94%;
+  --popover-border: 215 17% 17%;
 
-  /* Metallic Gold */
-  --primary: 43 74% 56%;
-  --primary-foreground: 222 47% 11%;
+  /* Deck gold */
+  --primary: 40 51% 57%;
+  --primary-foreground: 210 29% 5%;
 
-  /* Darker Gold/Bronze for hover states */
-  --secondary: 43 50% 30%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 40 35% 31%;
+  --secondary-foreground: 45 24% 94%;
 
-  /* Muted Navy */
-  --muted: 222 30% 18%;
-  --muted-foreground: 215 20% 65%;
+  --muted: 210 22% 15%;
+  --muted-foreground: 215 12% 64%;
 
-  /* Rich Accent */
-  --accent: 215 30% 20%;
-  --accent-foreground: 43 74% 56%;
+  --accent: 213 21% 18%;
+  --accent-foreground: 40 51% 57%;
 
   --destructive: 0 62% 45%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 45 24% 94%;
 
-  --border: 215 25% 20%;
-  --input: 215 25% 20%;
-  --ring: 43 74% 56%;
+  --border: 215 17% 17%;
+  --input: 215 17% 17%;
+  --ring: 40 51% 57%;
 
   --radius: 0.5rem;
 }
@@ -104,11 +101,11 @@
 /* Custom Gradients and Utilities for Premium Look */
 @layer utilities {
   .text-gradient-gold {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#C9A35A] via-[#E6D4A7] to-[#C9A35A];
   }
   
   .bg-gradient-gold {
-    @apply bg-gradient-to-r from-[#D4AF37] to-[#AA8A2A];
+    @apply bg-gradient-to-r from-[#C9A35A] to-[#9B7738];
   }
 
   .glass-card {

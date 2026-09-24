@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "installCommand": "pnpm install",
+  "buildCommand": "BASE_PATH=/ PORT=3000 pnpm --filter @workspace/venny-growth run build",
+  "outputDirectory": "artifacts/venny-growth/dist/public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
